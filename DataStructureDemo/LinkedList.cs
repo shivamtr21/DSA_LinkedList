@@ -66,18 +66,42 @@ namespace DataStructureDemo
 
         }
 
-        public void popfirst()
+        //public void popfirst()
+        //{
+        //    Console.WriteLine("After Delete top....");
+        //    Node temp = head;
+        //    temp = temp.next;
+        //    while (temp != null)
+        //    {
+        //        Console.WriteLine("Linked List is:" + temp.data);
+        //        temp = temp.next;
+        //    }
+        //}
+
+        public void poplast()
         {
-            Console.WriteLine("After Delete top....");
-            Node temp = head;
-            temp = temp.next;
-            while (temp != null)
+            Node temp = head, previous = null;
+
+            Console.WriteLine("After Poping last elements 70");
+
+            //Console.WriteLine("Values are=" + temp.data);
+            while (temp.next != null)
             {
-                Console.WriteLine("Linked List is:" + temp.data);
+                previous = temp;
+
                 temp = temp.next;
             }
-        }
+            temp = previous;
+            temp.next = null;
+            temp = head;
+            while (temp != null)
+            {
+                Console.WriteLine("Values are=" + temp.data);
+                temp = temp.next;
+            }
 
+
+        }
 
 
     }

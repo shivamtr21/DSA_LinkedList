@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace DataStructureDemo
+namespace DataStructure_LinkedList
 {
     internal class Program
     {
@@ -13,7 +13,8 @@ namespace DataStructureDemo
             list.Add(56);
             list.Add(30);
             list.Add(70);
-            list.popfirst();
+            //list.popfirst();
+            list.poplast();
             // list.Display();
             //list.InsertAtPerticularPosition(2, 30);
 
