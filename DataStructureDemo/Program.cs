@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace DataStructureDemo
 {
-     class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
@@ -10,10 +10,7 @@ namespace DataStructureDemo
             list.Add(56);
             list.Add(30);
             list.Add(70);
-
             list.Display();
-
-           
         }
     }
 
