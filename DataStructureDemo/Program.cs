@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataStructureDemo;
+using System;
 using System.Collections.Generic;
 
 
@@ -9,11 +10,12 @@ namespace DataStructureDemo
         static void Main(string[] args)
         {
             LinkedList list = new LinkedList();
-            list.Append(56);
-            list.Append(30);
-            list.Append(70);
+            list.Add(56);
+            
+            list.Add(70);
+             
+            list.InsertAtPerticularPosition(2, 30);
             list.Display();
-            Console.ReadLine();
         }
     }
 
