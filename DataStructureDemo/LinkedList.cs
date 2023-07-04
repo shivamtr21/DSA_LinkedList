@@ -32,21 +32,7 @@ namespace DataStructureDemo
             // Console.WriteLine("Value of node is: " + node);
         }
 
-        internal void Display()
-        {
-            Node temp = this.head;
 
-            if (temp == null)
-            {
-                Console.WriteLine("Linked list is empty");
-                return;
-            }
-            while (temp != null)
-            {
-                Console.Write(temp.data + " ");
-                temp = temp.next;
-            }
-        }
         internal Node InsertAtPerticularPosition(int position, int data)
         {
             if (position < 1)
@@ -79,6 +65,19 @@ namespace DataStructureDemo
             return head;
 
         }
+
+        public void popfirst()
+        {
+            Console.WriteLine("After Delete top....");
+            Node temp = head;
+            temp = temp.next;
+            while (temp != null)
+            {
+                Console.WriteLine("Linked List is:" + temp.data);
+                temp = temp.next;
+            }
+        }
+
 
 
     }

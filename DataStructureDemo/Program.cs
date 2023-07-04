@@ -11,11 +11,12 @@ namespace DataStructureDemo
         {
             LinkedList list = new LinkedList();
             list.Add(56);
-            
+            list.Add(30);
             list.Add(70);
-             
-            list.InsertAtPerticularPosition(2, 30);
-            list.Display();
+            list.popfirst();
+            // list.Display();
+            //list.InsertAtPerticularPosition(2, 30);
+
         }
     }
 
