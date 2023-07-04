@@ -9,23 +9,37 @@ namespace DataStructureDemo
 {
     class LinkedList
     {
-        internal Node head;
-        internal void Add(int data)
+        public Node head;
+        public void InsertLast(int new_data)
         {
-            Node node = new Node(data);
+
+            Node new_node = new Node(new_data);
             if (this.head == null)
-                this.head = node;
+            {
+                this.head = new_node;
+            }
             else
             {
-                Node temp = head;
-                while (temp.next != null)
-                {
-                    temp = temp.next;
-                }
-                temp.next = node;
+                Node lastNode = GetLastNode();
+                lastNode.next = new_node;
             }
-            Console.WriteLine("{0} inserted into the linked list", node.data);
+            Console.WriteLine("inserted Last into list " + new_node.data);
+
         }
+        public Node GetLastNode()
+        {
+            Node temp = this.head;
+            while (temp.next != null)
+            {
+                temp = temp.next;
+            }
+            return temp;
+        }
+        public void Append(int new_data)
+        {
+            InsertLast(new_data);
+        }
+
 
         internal void Display()
         {
@@ -40,7 +54,7 @@ namespace DataStructureDemo
                 Console.Write(temp.data + " ");
                 temp = temp.next;
             }
+
         }
     }
-
 }
